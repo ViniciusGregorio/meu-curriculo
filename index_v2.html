@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Currículo — Vinícius Gregório</title>
+<style>
+  :root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --accent1:#6ee7b7;
+    --accent2:#60a5fa;
+    --muted:#94a3b8;
+    --glass: rgba(255,255,255,0.03);
+    --radius:12px;
+    color-scheme: dark;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100vh;
+    background: radial-gradient(1000px 400px at 10% 10%, rgba(96,165,250,0.06), transparent),
+                linear-gradient(180deg, rgba(255,255,255,0.02), transparent 30%),
+                var(--bg);
+    color:#e6eef8;
+    padding:32px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:980px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap:28px;
+  }
+
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:var(--radius);
+    padding:20px;
+    box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  /* Left column */
+  .profile{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+    text-align:center;
+  }
+  .avatar{
+    width:120px;height:120px;border-radius:20px;
+    background:linear-gradient(135deg,var(--accent1),var(--accent2));
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:36px;color:#061124;
+    box-shadow: 0 6px 18px rgba(96,165,250,0.12);
+  }
+  h1{
+    margin:0;font-size:20px;
+  }
+  .role{color:var(--muted);font-size:13px;margin-top:4px}
+
+  .contact{width:100%;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+  .pill{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted);width:100%;display:flex;gap:8px;align-items:center}
+  .skills{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+
+  /* Right column */
+  .about{line-height:1.5;color:#dbeafe;padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+  .section{margin-bottom:16px}
+  .section h2{font-size:15px;margin:0 0 8px 0;color:var(--accent2)}
+  .job{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}
+  .job .left{max-width:75%}
+  .company{font-weight:600}
+  .period{color:var(--muted);font-size:13px}
+
+  .list{margin:0;padding-left:16px;color: #dbeafe}
+  .list li{margin-bottom:6px}
+
+  footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;color:var(--muted);font-size:13px}
+
+  /* Utilities */
+  .actions{display:flex;gap:8px}
+  button{
+    background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:#dbeafe;cursor:pointer;
+  }
+  .primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;color:#031024;font-weight:600}
+  @media (max-width:880px){
+    .wrap{grid-template-columns:1fr; padding-bottom:40px}
+    .profile{flex-direction:row;gap:14px;text-align:left}
+    .avatar{width:84px;height:84px;font-size:26px;border-radius:10px}
+  }
+
+  /* print friendly */
+  @media print{
+    body{padding:0;background:white;color:black}
+    .card{box-shadow:none;background:transparent;border:none}
+    .wrap{grid-template-columns:1fr;gap:0}
+    .actions, button{display:none}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <!-- Left column -->
+    <aside class="card">
+      <div class="profile">
+        <div class="avatar">VG</div>
+        <div>
+          <h1>Vinícius Gregório</h1>
+          <div class="role">Analista Desenvolvedor</div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="contact">
+        <div class="pill">📚 Formação: Desenvolvimento de Sistemas (Etec) — 2021–2023</div>
+        <div class="pill">🎓 Faculdade: Bach. Análise e Desenvolvimento de Sistemas — conclusão Dez/2026</div>
+        <div class="pill">💼 Situação: Estagiário em Tech (Java, Spring, Oracle) — atuação em sustentação e documentação</div>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="section">
+        <h2 style="margin-bottom:8px">Competências</h2>
+        <div class="skills">
+          <span class="tag">Java</span>
+          <span class="tag">Spring</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">ServiceNow</span>
+          <span class="tag">ClickUp</span>
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">Análise de Sistemas</span>
+          <span class="tag">Comunicação</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 style="margin-bottom:8px">Interesses</h2>
+        <div class="tag" style="display:inline-block">Inovação</div>
+        <div class="tag" style="display:inline-block">Vendas</div>
+        <div class="tag" style="display:inline-block">Trabalho em equipe</div>
+      </div>
+
+      <div style="height:8px"></div>
+
+      <div class="section">
+        <h2 style="margin-bottom:8px">Cursos Extras</h2>
+        <ul class="list">
+          <li>Java POO — Curso em Vídeo</li>
+          <li>Git / GitHub — Curso em Vídeo</li>
+          <li>Algoritmos — Curso em Vídeo</li>
+        </ul>
+      </div>
+
+      <div style="height:6px"></div>
+
+      <footer>
+        <div>Disponível para estágio/CLT</div>
+        <div style="font-size:12px;color:var(--muted)">Atualizado: Feb 2026</div>
+      </footer>
+    </aside>
+
+    <!-- Right column -->
+    <section class="card">
+      <div class="about section">
+        <p style="margin:0"><strong>Resumo profissional:</strong> Analista Desenvolvedor com formação técnica em Desenvolvimento de Sistemas (Etec) e cursando Bacharelado em Análise e Desenvolvimento de Sistemas (conclusão Dez/2026). Atualmente estagiando em uma empresa de tecnologia, atuando com sistemas Java, Spring e Oracle. Experiência em sustentação, resolução de problemas, implementação de documentação base do sistema e atendimento de demandas. Boa comunicação com stakeholders, familiaridade com ServiceNow e ClickUp, e interesse em inovação e área de vendas.</p>
+      </div>
+
+      <div class="section">
+        <h2>Experiência</h2>
+
+        <div class="job">
+          <div class="left">
+            <div class="company">Estágio — Empresa Tech (Tech X)</div>
+            <div class="period">2024 — Atual</div>
+            <ul class="list">
+              <li>Atuação com sistemas Java e Spring em ambiente Oracle.</li>
+              <li>Participação no time de sustentação: investigação e resolução de incidentes e demandas.</li>
+              <li>Contribuição na implementação da documentação base do sistema (padronização e onboarding).</li>
+              <li>Comunicação com stakeholders e suporte à área de produto e operações.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="left">
+            <div class="company">Projetos acadêmicos / pessoais</div>
+            <div class="period">2021 — 2024</div>
+            <ul class="list">
+              <li>Desenvolvimento de pequenos sistemas para controle e protótipos utilizando Java e SQL.</li>
+              <li>Implantação de controle de versões via Git e publicação de repositórios no GitHub.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Formação</h2>
+        <div style="display:flex;justify-content:space-between;align-items:start">
+          <div>
+            <div class="company">Etec — Desenvolvimento de Sistemas (integrado ao ensino médio)</div>
+            <div class="period">2021 — 2023</div>
+          </div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div style="display:flex;justify-content:space-between;align-items:start">
+          <div>
+            <div class="company">Faculdade Estadual — Análise e Desenvolvimento de Sistemas</div>
+            <div class="period">2024 — Dez/2026 (previsão)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Ferramentas & Processos</h2>
+        <ul class="list">
+          <li>ServiceNow — suporte e gerenciamento de incidentes.</li>
+          <li>ClickUp — organização de demandas e sprints.</li>
+          <li>Oracle Database — consultas, manutenção e deploys básicos.</li>
+          <li>Git / GitHub — versionamento e fluxos básicos (branches, PRs).</li>
+          <li>Documentação técnica — criação e padronização de bases de conhecimento.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Soft Skills</h2>
+        <ul class="list">
+          <li>Comunicação clara com stakeholders e times multidisciplinares.</li>
+          <li>Trabalho em equipe e orientação a resultados.</li>
+          <li>Interesse por inovação e interface com área de vendas.</li>
+        </ul>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+        <div class="actions">
+          <button onclick="toggleTheme()">🌗 Tema</button>
+          <button class="primary" onclick="window.print()">🖨️ Imprimir / Exportar PDF</button>
+        </div>
+        <div style="font-size:13px;color:var(--muted)">Contato: vinicius.exemplo@email.com • (00) 90000-0000</div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  function toggleTheme(){
+    const root = document.documentElement;
+    if(root.style.getPropertyValue('--bg') === '#0f1724'){
+      // light-ish
+      root.style.setProperty('--bg','#f6f8fb');
+      root.style.setProperty('--card','#ffffff');
+      root.style.setProperty('--accent1','#10b981');
+      root.style.setProperty('--accent2','#3b82f6');
+      root.style.setProperty('--muted','#475569');
+      document.body.style.color = '#0b1220';
+    } else {
+      // dark
+      root.style.setProperty('--bg','#0f1724');
+      root.style.setProperty('--card','#0b1220');
+      root.style.setProperty('--accent1','#6ee7b7');
+      root.style.setProperty('--accent2','#60a5fa');
+      root.style.setProperty('--muted','#94a3b8');
+      document.body.style.color = '#e6eef8';
+    }
+  }
+</script>
+</body>
+</html>
